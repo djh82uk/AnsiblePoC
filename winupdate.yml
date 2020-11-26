@@ -1,4 +1,4 @@
-- name: Hello World Sample
+- name: Windows Updates
   hosts: all
   tasks:
     - name: Install all critical and security updates
