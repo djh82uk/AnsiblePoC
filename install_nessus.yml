@@ -13,8 +13,8 @@
          
       - name: Copy my Installer
         win_copy:
-          src: '/home/ansibleadmin/tools/putty-64bit-0.74-installer.msi'
-          dest: "C:\ansible_tools\putty-64bit-0.74-installer.msi"
+          src: /home/ansibleadmin/tools/putty-64bit-0.74-installer.msi
+          dest: C:\ansible_tools\putty-64bit-0.74-installer.msi
 
       - name: Install MSI
         win_package: 
