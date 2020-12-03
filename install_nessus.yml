@@ -3,7 +3,7 @@
  
   tasks:    
       - name: Create a mapped drive that requires authentication
-         win_mapped_drive:
+        win_mapped_drive:
           letter: T
           path: https://ansiblestg001.file.core.windows.net/tools
           state: present
