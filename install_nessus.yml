@@ -1,0 +1,13 @@
+- name: Installing Nessus Agent MSI 
+  hosts: win 
+ 
+  tasks:
+    - name: Download the Nessus installer
+      win_get_url:
+        url: https://archive.apache.org/dist/httpd/binaries/win32/httpd-2.2.25-win32-x86-no_ssl.msi
+        dest: C:\ansible_examples\httpd-2.2.25-win32-x86-no_ssl.msi
+
+    - name: Install MSI
+      win_package: 
+        path: C:\ansible_examples\NessusAgent-<version number>-x64.msi NESSUS_GROUPS="Agent Group Name" NESSUS_SERVER="192.168.0.1:8834" NESSUS_KEY=00abcd00000efgh11111i0k222lmopq3333st4455u66v777777w88xy9999zabc00 /qnhttpd-2.2.25-win32-x86-no_ssl.msi
+        state: present
