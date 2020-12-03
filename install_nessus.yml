@@ -9,7 +9,7 @@
           container: ansibletools
           blob: putty-64bit-0.74-installer.msi
           dest: /home/ansibleadmin/tools/putty-64bit-0.74-installer.msi
-         delegate_to: localhost
+        delegate_to: localhost
          
       - name: Copy my Installer
         win_copy:
