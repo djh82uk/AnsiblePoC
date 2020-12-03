@@ -1,5 +1,5 @@
 - name: Installing Putty Client MSI 
-  hosts: AzureWindows
+  hosts: all
  
   tasks:    
       - name: Download the file
