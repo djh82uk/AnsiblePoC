@@ -5,7 +5,7 @@
       - name: Create a mapped drive that requires authentication
         win_mapped_drive:
           letter: T
-          path: ansiblestg001.file.core.windows.net\tools
+          path: \\ansiblestg001.file.core.windows.net\tools
           state: present
           
       - name: Copy my Installer	
