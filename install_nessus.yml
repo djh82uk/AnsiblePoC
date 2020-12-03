@@ -10,13 +10,4 @@
         state: present
         username: '{{ ansiblestg_user }}'
         password: '{{ ansiblestg_password }}'
-    - 
-      name: "Copy my Installer"
-      win_copy: 
-        dest: C:\ansible_tools\putty-64bit-0.74-installer.msi
-        src: T:\putty-64bit-0.74-installer.msi
-    - 
-      name: "Install MSI"
-      win_package: 
-        path: C:\ansible_tools\putty-64bit-0.74-installer.msi
-        state: present
+
