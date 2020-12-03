@@ -7,6 +7,12 @@
           letter: T
           path: \\ansiblestg001.file.core.windows.net\tools
           state: present
+      vars:
+        # become is required to save and retrieve the credentials in the tasks
+        ansible_become: yes
+        ansible_become_method: runas
+        ansible_become_user: '{{ ansiblestg_user }}'
+        ansible_become_pass: '{{ ansiblestg_password }}'
           
       - name: Copy my Installer	
         win_copy:	
