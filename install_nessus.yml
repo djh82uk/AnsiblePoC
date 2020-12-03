@@ -11,6 +11,6 @@
           dest: C:\ansible_tools\putty-64bit-0.74-installer.msi
 
       - name: Install MSI
-      win_package: 
-        path: C:\ansible_tools\putty-64bit-0.74-installer.msi
-        state: present
+        win_package: 
+          path: C:\ansible_tools\putty-64bit-0.74-installer.msi
+          state: present
