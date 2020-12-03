@@ -2,15 +2,15 @@
   hosts: win 
  
   tasks:    
-     - name: Download the file
-       azure_rm_storageblob:
-         resource_group: ansible-rg-001
-         storage_account_name: ansiblestg001
-         container: ansibletools
-         blob: putty-64bit-0.74-installer.msi
-         dest: C:\ansible_tools\putty-64bit-0.74-installer.msi
+      - name: Download the file
+        azure_rm_storageblob:
+          resource_group: ansible-rg-001
+          storage_account_name: ansiblestg001
+          container: ansibletools
+          blob: putty-64bit-0.74-installer.msi
+          dest: C:\ansible_tools\putty-64bit-0.74-installer.msi
 
-    - name: Install MSI
+      - name: Install MSI
       win_package: 
         path: C:\ansible_tools\putty-64bit-0.74-installer.msi
         state: present
