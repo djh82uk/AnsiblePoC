@@ -4,9 +4,15 @@
   tasks:    
       - name: Create a mapped drive that requires authentication
          win_mapped_drive:
-          letter: M
-          path: \\SERVER\C$
+          letter: T
+          path: https://ansiblestg001.file.core.windows.net/tools
           state: present
+          
+      - name: Copy my Installer	
+        win_copy:	
+          src: T:\putty-64bit-0.74-installer.msi	
+          dest: C:\ansible_tools\putty-64bit-0.74-installer.msi
+       
 
 
       - name: Install MSI
