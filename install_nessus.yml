@@ -4,15 +4,12 @@
   tasks: 
     - 
       name: "Create a mapped drive that requires authentication"
-      vars: 
-        ansible_become: true
-        ansible_become_method: runas
-        ansible_become_pass: "{{ ansiblestg_password }}"
-        ansible_become_user: "{{ ansiblestg_user }}"
       win_mapped_drive: 
         letter: T
         path: \\ansiblestg001.file.core.windows.net\tools
         state: present
+        username: '{{ ansiblestg_user }}'
+        password: '{{ ansiblestg_password }}'
     - 
       name: "Copy my Installer"
       win_copy: 
