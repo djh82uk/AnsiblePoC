@@ -18,6 +18,7 @@
     - 
       name: "Copy my Installer"
       win_copy: 
+        remote_src: yes
         dest: "C:\\ansible_tools\\putty-64bit-0.74-installer.msi"
         src: "T:\\putty-64bit-0.74-installer.msi"
     - 
