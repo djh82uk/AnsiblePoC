@@ -3,10 +3,10 @@
   name: "Installing Putty Client MSI"
   tasks: 
     -
-    name: Create directory structure
-    win_file:
-      path: "C:\\ansible_tools"
-      state: directory
+      name: Create directory structure
+      win_file:
+        path: "C:\\ansible_tools"
+        state: directory
     - 
       name: "Copy my Installer"
       win_copy: 
