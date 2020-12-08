@@ -1,6 +1,5 @@
 - name: Installing Putty Client MSI 
   hosts: all
-  name: "Installing Putty Client MSI"
   tasks: 
     -
       name: Create directory structure
