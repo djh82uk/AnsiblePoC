@@ -24,3 +24,32 @@
         - SecurityUpdates
         state: installed
       register: update_result
+      
+      
+- name: Installing 7ZIP MSI 
+  hosts: ansiblehostwin001
+  tasks: 
+    -
+      name: "Copy my Installer"
+      win_copy: 
+        dest: "C:\\ansible_tools\\7z1900-X64.msi"
+        src: /opt/tools/7z1900-X64.msi
+    - 
+      name: "Install MSI"
+      win_package: 
+        path: "C:\\ansible_tools\\7z1900-X64.msi"
+        state: present
+
+- name: Installing VLC MSI 
+  hosts: ansiblehostwin002
+  tasks: 
+    -
+      name: "Copy my Installer"
+      win_copy: 
+        dest: "C:\\ansible_tools\\Video_Lan_VLC_Media_Player_3.0.5_P1.0.msi"
+        src: /opt/tools/Video_Lan_VLC_Media_Player_3.0.5_P1.0.msi
+    - 
+      name: "Install MSI"
+      win_package: 
+        path: "C:\\ansible_tools\\Video_Lan_VLC_Media_Player_3.0.5_P1.0.msi"
+        state: present
