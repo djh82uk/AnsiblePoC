@@ -1,12 +1,16 @@
-- name: Installing Putty Client MSI 
+- name: Uninstalling Hotfixes
   hosts: all
   tasks: 
     -
-      name: Uninstall hotfix with KB
+      name: Uninstall hotfix with KBKB4593226
       win_hotfix:
         hotfix_kb: KB4593226
         state: absent
       register: hotfix_uninstall
+
+- name: Installing Putty Client MSI 
+  hosts: all
+  tasks: 
     -
       name: Create directory structure
       win_file:
