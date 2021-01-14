@@ -2,9 +2,9 @@
   hosts: all
   tasks: 
     -
-      name: Uninstall hotfix with KBKB4593226
+      name: Uninstall hotfix with KB4054590
       win_hotfix:
-        hotfix_kb: KB4593226
+        hotfix_kb: KB4054590
         state: absent
       register: hotfix_uninstall
 
