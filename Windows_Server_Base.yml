@@ -10,17 +10,6 @@
         state: installed
       register: update_result
 
-
-- name: Uninstalling Hotfixes
-  hosts: all
-  tasks: 
-    -
-      name: Uninstall hotfix with KB4054590
-      win_hotfix:
-        hotfix_kb: KB4054590
-        state: absent
-      register: hotfix_uninstall
-
 - name: Installing Putty Client MSI 
   hosts: all
   tasks: 
