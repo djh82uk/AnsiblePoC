@@ -71,4 +71,14 @@
         path: "C:\\ansible_tools\\MicrosoftEdgeEnterpriseX64.msi"
         state: present
         
+- name: Uninstalling Hotfixes
+  hosts: all
+  tasks: 
+    -
+      name: Uninstall hotfix with KB4598243
+      win_hotfix:
+        hotfix_kb: KB4598243
+        state: absent
+      register: hotfix_uninstall
+        
 
