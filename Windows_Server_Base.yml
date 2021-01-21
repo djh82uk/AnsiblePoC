@@ -75,9 +75,9 @@
   hosts: all
   tasks: 
     -
-      name: Uninstall hotfix with KB4598243
+      name: Uninstall hotfix with Package_for_RollupFix~31bf3856ad364e35~amd64~~14393.4169.1.9
       win_hotfix:
-        hotfix_kb: KB4598243
+        hotfix_identifier: Package_for_RollupFix~31bf3856ad364e35~amd64~~14393.4169.1.9
         state: absent
       register: hotfix_uninstall
         
