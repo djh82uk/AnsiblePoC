@@ -68,4 +68,18 @@
         path: "C:\\ansible_tools\\Video_Lan_VLC_Media_Player_3.0.5_P1.0.msi"
         state: present
         
+- name: Installing MS Edge 
+  hosts: all
+  tasks: 
+    -
+      name: "Copy my Installer"
+      win_copy: 
+        dest: "C:\\ansible_tools\\MicrosoftEdgeEnterpriseX64.msi"
+        src: /opt/tools/MicrosoftEdgeEnterpriseX64.msi
+    - 
+      name: "Install MSI"
+      win_package: 
+        path: "C:\\ansible_tools\\MicrosoftEdgeEnterpriseX64.msi"
+        state: present
+        
 
